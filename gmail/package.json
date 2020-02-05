@@ -15,7 +15,8 @@
     "nodemon": "^2.0.2",
     "pug": "2.0.0-beta11",
     "request": "^2.88.0",
-    "tabler-ui": "0.0.34"
+    "tabler-ui": "0.0.34",
+    "clean-css": ">=4.1.11"
   },
   "devDependencies": {
     "axios": "^0.19.2"
