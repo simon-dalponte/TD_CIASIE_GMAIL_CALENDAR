@@ -1,0 +1,18 @@
+version: "2"
+
+networks:
+  td.net:
+    driver: bridge
+
+services:
+  node:
+    image: node
+    user: "node"
+    working_dir: /app/gmail
+    volumes:
+      - ./gmail:/app/gmail
+    command: "npm run dev"
+    ports:
+      - "3000:8080"
+    networks:
+      - 'td.net'

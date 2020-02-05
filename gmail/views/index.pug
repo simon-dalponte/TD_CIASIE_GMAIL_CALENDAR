@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  div(class="card" style="text-align:center")
+    if token
+        form( method="post" action="/calendar")
+          div(class="card-header")
+            h3(class="card-title") Entrer un évenement
+          div(class="card-body")
+            div(class="col-md-12 col-lg-12")
+              div(class="form-group")
+                label(class="form-label") Name
+                input(type="text" class="form-control" placeholder="ajouter le nom de l'evenement" name="name" required)
+              div(class="form-group")
+                label(class="form-label") Date de debut
+                input(type="date" class="form-control" placeholder="ajouter la date de debut" name="date_deb" required)
+              div(class="form-group")
+                label(class="form-label") Date de fin
+                input(type="date" class="form-control" placeholder="ajouter la date de fin " name="date_fin" required)
+          div(class="card-footer text-right")
+            button(type="submit" class="btn btn-pill btn-gray-dark") Ajouter l'evenement
+    else
+      a(style="margin:3%" class="btn btn-pill btn-gray-dark btn-lg" href="https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/calendar&redirect_uri=http://localhost:3000/login&response_type=code&client_id=1064165836704-5ps35d6dtddfhj44g79p5opd7hljm304.apps.googleusercontent.com") se connecter a google !
+
+

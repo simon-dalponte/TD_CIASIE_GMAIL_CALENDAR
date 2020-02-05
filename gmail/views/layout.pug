@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href="dashboard.css")
+  body
+    div(class='page')
+      div(class='flex-fill')
+        div(class='header py-4')
+          div(class="col-12 col-sm col-lg-12")
+            h1(style="text-align:center") TD avec l'API Google
+        div(class='header collapse d-lg-flex p-0')
+        div(class='my-3 my-md-5')
+          div(class="container")
+            div(class="col-12 col-sm col-lg-12")
+
+                block content
+            div(class="row")
+              block calendar

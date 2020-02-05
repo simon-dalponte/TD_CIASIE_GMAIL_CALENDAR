@@ -1,0 +1,18 @@
+extends layout
+
+block calendar
+    title Calendrier
+    for calendar in events
+        div(class="col-md-6 col-xl-4")
+            div(class="card")
+                div(class="card-header")
+                    h1(class="card-title")= calendar.summary
+                div(class="card-body")
+                    div(class="flex-fill")
+                        div(class="row")
+                            p(style="padding-right:4px;font-weight:bold ")  Date de début:
+                            p= calendar.start.date
+                        div(class="row")
+                            p(style="padding-right:4px;font-weight:bold ") Date de fin:
+                            p= calendar.end.date
+
